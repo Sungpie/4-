@@ -30,10 +30,10 @@ const addTodo = (todo) => {
             } else {
                 $todoElement.classList.toggle('completed')  // 리스트가 완료되어 있지 않다면 완료 표시를 하고 현재 완료한 일 개수를 하나 더합니다.
                 current_work_num += 1;
-            }
-        
+            }    
         current.innerText = current_work_num;
         })
+
 
         $todoElement.addEventListener('contextmenu', (e) => {
             e.preventDefault();
@@ -42,7 +42,6 @@ const addTodo = (todo) => {
             total.innerText = total_work_num; //리스트를 지우게 되면 개수를 하나 빼고 전체 할 일에 대한 개수를 업데이트 하여 화면에 출력합니다.
 
         })
-
         todos.append($todoElement)
         input.value = '';
     }
